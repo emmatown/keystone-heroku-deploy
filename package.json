@@ -9,7 +9,8 @@
     "node": ">=8.4.0"
   },
   "scripts": {
-    "start": "DISABLE_LOGGING=true node index.js"
+    "build": "keystone build",
+    "start": "keystone start"
   },
   "dependencies": {
     "@keystone-alpha/adapter-knex": "^3.0.0",
