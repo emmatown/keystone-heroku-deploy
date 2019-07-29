@@ -10,15 +10,13 @@
   },
   "scripts": {
     "build": "keystone build",
-    "start": "keystone start --connect-to=$DATABASE_URL"
+    "start": "CONNECT_TO=$DATABASE_URL keystone start --connect-to=$DATABASE_URL"
   },
   "dependencies": {
     "@keystone-alpha/adapter-knex": "^3.0.0",
-    "@keystone-alpha/admin-ui": "^3.2.1",
     "@keystone-alpha/app-admin-ui": "^5.1.0",
     "@keystone-alpha/app-graphql": "^6.3.1",
     "@keystone-alpha/app-static": "^1.0.3",
-    "@keystone-alpha/core": "^2.0.4",
     "@keystone-alpha/fields": "^10.0.0",
     "@keystone-alpha/keystone": "^9.0.0"
   }
