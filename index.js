@@ -1,5 +1,5 @@
 const { Keystone } = require("@keystone-alpha/keystone");
-const { KnexAdapter } = require("@keystone-alpha/adapter-knex");
+const { KnexAdapter } = require("./knex");
 const { Text } = require("@keystone-alpha/fields");
 const { GraphQLApp } = require("@keystone-alpha/app-graphql");
 const { AdminUIApp } = require("@keystone-alpha/app-admin-ui");
@@ -9,8 +9,6 @@ const keystone = new Keystone({
   name: "Keystone To-Do List",
   adapter: new KnexAdapter()
 });
-
-console.log(process.env.DATABASE_URL);
 
 keystone.connect(process.env.DATABASE_URL);
 
