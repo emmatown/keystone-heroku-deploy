@@ -10,8 +10,6 @@ const keystone = new Keystone({
   adapter: new KnexAdapter()
 });
 
-keystone.connect(process.env.DATABASE_URL);
-
 keystone.createList("Todo", {
   schemaDoc: "A list of things which need to be done",
   fields: {

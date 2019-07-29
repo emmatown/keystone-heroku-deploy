@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "keystone build",
-    "start": "keystone start"
+    "start": "keystone start --connect-to=$DATABASE_URL"
   },
   "dependencies": {
     "@keystone-alpha/adapter-knex": "^3.0.0",
