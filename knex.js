@@ -41,6 +41,8 @@ class KnexAdapter extends BaseKeystoneAdapter {
       connection
     });
     this.schemaName = schemaName;
+
+    await this.knex.raw(`CREATE SCHEMA IF NOT EXISTS ${this.schemaName}`);
   }
 
   async postConnect() {
