@@ -34,7 +34,7 @@ class KnexAdapter extends BaseKeystoneAdapter {
       schemaName = "keystone",
       ...rest
     } = config;
-    console.log({ connection });
+    console.log({ connection, to });
     this.knex = knex({
       ...rest,
       client: this.client,
